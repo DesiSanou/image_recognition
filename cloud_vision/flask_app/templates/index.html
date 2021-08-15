@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>{% block title %} Image to text converter {% endblock %}</h1>
+<hr>
+<div>
+  <p> This app extracts text from an image
+  </p>
+    <strong>Make sure your files have following properties</strong>
+    <ul>
+        <li>Allowed extensions: {{config['UPLOAD_EXTENSIONS']}}</li>
+        <li>Total files size should not exceed: {{config['MAX_CONTENT_LENGTH']/(1024*1024)}} MB</li>
+    </ul>
+</div>
+
+{% endblock %}

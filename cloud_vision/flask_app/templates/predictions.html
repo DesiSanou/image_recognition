@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% block content %}
+<h1>{% block title %} Here are your extracted texts {% endblock %}</h1>
+<hr>
+<input type="button" value="Print this page" onClick="window.print()", style="position:fixed;right:0;color:blue">
+{% endblock %}
+{% for file, prediction in filenames|zip(predictions_infos) %}
+<strong>filename: {{file}}</strong>
+<figure>
+  <img src="{{ url_for('upload', filename=file) }}" alt="{{prediction}}" style="width: 128px">
+</figure>
+ <script type="text/javascript" src="./text_area.js" > </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form method="post">
+  <h3>Extracted text:</h3>
+  <textarea id="text" name="text" rows="4" cols="100">{{prediction}}</textarea>
+  <br><br>
+</form>
+{% endfor %}
+{% endblock %}
