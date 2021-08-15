@@ -40,3 +40,7 @@ he killed? for indeed I promised to eat all of his killing.
 {'vertices': [{'x': 16, 'y': 10}, {'x': 802, 'y': 10}, {'x': 802, 'y': 1039}, {'x': 16, 'y': 1039}]}
 </pre>
 **valid**: True 
+
+## Using the web app.
+
+With the web app , you can directly upload your images files and get the extracted content displays.
